@@ -7,4 +7,6 @@ before_install:
   - docker build -t sanmitta/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true sanmitta/docker-react npm run test
+  - docker run sanmitta/docker-react npm run test -- --coverage
+  
+#docker run -e CI=true sanmitta/docker-react npm run test
