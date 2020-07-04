@@ -23,6 +23,3 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
 
 
-  #http://docker-env.eba-5nxyzuxw.us-east-2.elasticbeanstalk.com/
-
-
