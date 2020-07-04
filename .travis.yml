@@ -8,3 +8,21 @@ before_install:
 
 script:
   - docker run -e CI=true sanmitta/docker-react npm run test
+
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker"
+  env: "Docker-env"
+  bucker_name: "elasticbeanstalk-us-east-2-321941019666"
+  bucket-path: "docker"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
+
+  #http://docker-env.eba-5nxyzuxw.us-east-2.elasticbeanstalk.com/
+
+
